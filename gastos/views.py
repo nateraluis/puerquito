@@ -7,14 +7,17 @@ def index(request):
 
 
 def register(request):
-    form = CreateUserForm()
-    if request.method == 'POST':
-        form = CreateUserForm(request.POST)
-        if form.is_valid():
-            form.save()
-            user = form.cleaned_data.get('username')
-            messages.success(request, 'Account created for '+user)
-            return redirect('login')
+    if request.user.is_authenticated:
+        return redirect('query')
+    else:
+        form = CreateUserForm()
+        if request.method == 'POST':
+            form = CreateUserForm(request.POST)
+            if form.is_valid():
+                form.save()
+                user = form.cleaned_data.get('username')
+                messages.success(request, 'Account created for '+user)
+                return redirect('index')
 
     context = {'form': form}
     return render(request, 'gastos/registro.html')

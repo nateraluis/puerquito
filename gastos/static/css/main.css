@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Lora|Oswald');
+/* @import url('https://fonts.googleapis.com/css?family=Heebo:800|Oswald'); */
+
+  /* Create two equal columns that floats next to each other */
+
+  * {
+	box-sizing: border-box;
+  }
+  
+  .column {
+	float: left;
+	width: 60%;
+	padding: 10px;
+	height: 100px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+body {
+	font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.btn {
+	font-family: 'Oswald', sans-serif;
+}
+
+.custom-title {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.navbar-collapse {
+	font-family: 'Oswald', sans-serif;
+}
+
+.navbar-border {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#navbar {
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.home-header {
+	/* background: url('https://placehold.it/1440'); */
+}
+
+#home-video {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	object-fit: cover;
+	height: calc(100vh + 200px);
+	width: 100%;
+	background-size: cover;
+	overflow: hidden;
+	z-index: -100;
+}
+
+.home-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: calc(100vh + 200px);
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: -50;
+}
+
+.page-header {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+}
+
+.banner {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("../images/banner.png");
+	position:relative;
+	z-index: 0;
+}
+
+.background-opacity {
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	left:0;
+	z-index:-1;
+	opacity:-0.1;
+	background-color:black;
+}
+
+.media-img {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 250px;
+	height: 250px;
+}
+
+.restaurant {
+	background-image: url('../images/restaurant.png');
+  background-size: cover;
+  width: 42px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.polygon {
+	background: white;
+	-webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+	clip-path: polygon(100% 0, 0 100%, 100% 100%);
+	width: 100%;
+	border-bottom: 1px solid white;
+	margin-bottom: -0.5px;
+}
+
+.polygon2 {
+	background: white;
+	-webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+	clip-path: polygon(0 0, 0 100%, 100% 100%);
+	width: 100%;
+}
+
+.polygon2 {
+	background: white;
+	-webkit-clip-path: polygon(0 0, 68% 100%, 100% 0, 100% 100%, 0 100%);
+	width: 100%;
+}
+
+p {
+	line-height: 180%;
+}
+
+.dropdown-menu {
+	min-width: 200px;
+}
+.dropdown-menu.columns-2 {
+	min-width: 400px;
+}
+.dropdown-menu.columns-3 {
+	min-width: 700px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+}
+.multi-column-dropdown {
+	list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.multi-column-dropdown li a {
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	/* color: #333; */
+	white-space: normal;
+}
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	/* color: #262626; */
+	/* background-color: #999; */
+}
+ 
+@media (max-width: 767px) {
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
+}
+
+p.dropdown-header {
+	font-family: 'Lora', serif;
+}
+
+
+#nudo {
+	width:180%;
+	margin-left:-80%;
+	margin-top:-20%;
+}
+
+.title-methodology{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+}
+
+.title-p{
+	text-align:left;
+}
+
+#diagram1{
+	width:125%;
+	margin-left:-13%;
+}
+#diagram2{
+	width:130%;
+	margin-left:-18%;
+}
+
+
+.diagram-div1{
+	padding:0;
+	margin:auto;
+	margin-top:-15%;
+}
+.diagram-div2{
+	padding:0;
+	margin:auto;
+}
+
+#cachePopup{
+	background-color: rgba(44, 118, 188, 0.6);
+	color:white;
+	text-align: left;
+	padding:10px;
+	font-size:0.8em;
+	display:none;
+}
+.cacheText{
+	padding-left:10%;
+}
+
+#iunderstandbutton{
+  
+  border-color:white;
+  width:60%;
+  height:85%;
+  font-size:0.8em;
+  padding-top:4% !important;
+  padding-left: 8% !important;
+  text-align:right !important;
+}
+.colorInHover{
+	color: #fff !important;
+	background-color: rgba(33, 95, 167, 0.4) !important;
+}
+.colorOutHover{
+	color: black !important;
+	background-color: white !important;
+}
+#cachePopup:hover{
+	background-color: rgba(32, 74, 136, 0.8);
+
+}
+
+
+#popuppllink {color:white !important;}
+
+.slightMarginTop{
+	margin-top: 2%;
+}
+
+#sticker{
+	margin-top:5% !important;
+}
+.stickerdiv{
+	opacity:0.9;
+}
+.brochureContent{
+	width:250% !important;
+	margin-left:-70% !important;
+	height:700px!important;
+}
+#pdfviewer{
+	height:600px;
+}

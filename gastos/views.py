@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import CreateUserForm
+from django.contrib import messages
 
 
 def index(request):
@@ -8,7 +9,7 @@ def index(request):
 
 def register(request):
     if request.user.is_authenticated:
-        return redirect('query')
+        return redirect('index')
     else:
         form = CreateUserForm()
         if request.method == 'POST':
@@ -16,11 +17,11 @@ def register(request):
             if form.is_valid():
                 form.save()
                 user = form.cleaned_data.get('username')
+                print(user)
                 messages.success(request, 'Account created for '+user)
-                return redirect('index')
-
+                return render(request, 'gastos/registro.html')
     context = {'form': form}
-    return render(request, 'gastos/registro.html')
+    return render(request, 'gastos/registro.html', context)
 
 
 def panel_control(request):

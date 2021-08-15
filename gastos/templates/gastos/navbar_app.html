@@ -1,0 +1,69 @@
+<!-- Image and text -->
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-4" id="navbar">
+    <div class="container">
+        <a class="d-none d-lg-block navbar-brand mb-0 h1" href="/">
+            <a class="navbar-brand mb-0 h1" href="/">🐖 Puerquito</a>
+
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="ml-auto navbar-nav">
+                    <li class="nav-item active">
+                        <span class="nav-link mb-0"> HELLO, {{request.user}} </span>
+                    </li>
+                    {% if '/panel' in request.path %}
+                    <li class="nav-item active">
+                        <a class="nav-link mb-0" href="/panel">Panel control</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link mb-0" href="/panel">Panel control</a>
+                    </li>
+                    {% endif %}
+
+                    {% if '/ingreso' in request.path %}
+                    <li class="nav-item active">
+                        <a class="nav-link mb-0" href="/ingreso">Ingreso</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link mb-0" href="/ingreso">Ingreso</a>
+                    </li>
+                    {% endif %}
+                    {% if '/egreso' in request.path %}
+                    <li class="nav-item active">
+                        <a class="nav-link mb-0" href="/egreso">Egreso</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link mb-0" href="/egreso">Egreso</a>
+                    </li>
+                    {% endif %}
+                    {% if '/resumen' in request.path %}
+                    <li class="nav-item active">
+                        <a class="nav-link mb-0" href="/resumen">Resumen</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link mb-0" href="/resumen">Resumen</a>
+                    </li>
+                    {% endif %}
+
+                    {% if '/logout' in request.path %}
+                    <li class="nav-item active">
+                        <a class="nav-link mb-0" href="/logout">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link mb-0" href="/logout">Logout</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+    </div>
+</nav>

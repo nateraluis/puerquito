@@ -31,20 +31,10 @@
 </head>
 
 <body>
-    {% include 'gastos/navbar.html' %}
+    {% include 'gastos/navbar_app.html' %}
 
 
     {% block content %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"> 
-                    <h1>Puerquito</h1>
-                    <p>
-                        <a href="{% url 'gastos:gastos_list' %}">Ver lista de gastos</a>
-                    </p>
-                </div>
-            </div>
-        </div>
 
     {%endblock%}
 

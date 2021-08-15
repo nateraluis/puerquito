@@ -1,0 +1,26 @@
+{% extends 'gastos/main_app.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container h-100">
+    <br>
+    <br>
+    <div class="d-flex justify-content-center h-100">
+        <strong>  Hola {{request.user}}! 🐷 </strong>
+    </div>
+    <br>
+    <br>
+    <div class="d-flex justify-content-center h-100">
+        <a class="btn btn-primary btn-lg" href="/ingreso" role="button">Ingresos</a>  
+        <a class="btn btn-secondary btn-lg" href="/egreso" role="button">Egresos</a>
+    </div>
+    <br>
+    <br>
+    <div class="d-flex justify-content-center h-100">
+        <button type="button" class="btn btn-primary btn-lg">Resumen</button>
+    </div>
+</div>
+
+{% endblock %}
